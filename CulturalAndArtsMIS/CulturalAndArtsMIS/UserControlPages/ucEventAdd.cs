@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CulturalAndArtsMIS.Models;
 
 namespace CulturalAndArtsMIS.UserControlPages
 {
@@ -26,6 +27,28 @@ namespace CulturalAndArtsMIS.UserControlPages
                     _instance = new ucEventAdd();
                 return _instance;
             }
+        }
+
+        private void bt_AddEvent_Click(object sender, EventArgs e)
+        {
+            using (cAaMISContext ctx = new cAaMISContext())
+            {
+                var events = new YearListOfEvents
+                {
+                    DescriptionEvent = tb_DescriptionEvent.Text,
+                    DateEvent = dateTimePicker_DateEvent.Value.Date
+                };
+
+                ctx.YearListOfEvents.Add(events);
+                ctx.SaveChanges();
+                MessageBox.Show("Event Added Succesfully");
+                ClearText();
+            }
+        }
+
+        private void ClearText()
+        {
+            tb_DescriptionEvent.Clear();
         }
     }
 }
