@@ -30,6 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.subPanel_side_Request = new System.Windows.Forms.Panel();
             this.bt_side_EPR = new System.Windows.Forms.Button();
             this.bt_side_IPR = new System.Windows.Forms.Button();
@@ -42,7 +43,6 @@
             this.bt_side_Events = new System.Windows.Forms.Button();
             this.bt_side_Profile = new System.Windows.Forms.Button();
             this.panel_Body = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.subPanel_side_Request.SuspendLayout();
             this.subPanel_side_Events.SuspendLayout();
@@ -71,6 +71,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(211, 484);
             this.panel2.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.Location = new System.Drawing.Point(0, 355);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(211, 39);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Accounts";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // subPanel_side_Request
             // 
@@ -204,17 +215,6 @@
             this.panel_Body.Name = "panel_Body";
             this.panel_Body.Size = new System.Drawing.Size(817, 484);
             this.panel_Body.TabIndex = 2;
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.Location = new System.Drawing.Point(0, 355);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(211, 39);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Request";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 

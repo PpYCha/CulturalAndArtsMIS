@@ -31,10 +31,10 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tb_DescriptionEvent = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
+            this.dateTimePicker_DateEvent = new System.Windows.Forms.DateTimePicker();
+            this.bt_AddEvent = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,13 +43,13 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.48756F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.51244F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 174F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 175F));
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tb_DescriptionEvent, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.dateTimePicker1, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.dateTimePicker_DateEvent, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.bt_AddEvent, 0, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -81,14 +81,14 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Description:";
             // 
-            // textBox1
+            // tb_DescriptionEvent
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.textBox1, 2);
-            this.textBox1.Location = new System.Drawing.Point(347, 68);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(634, 23);
-            this.textBox1.TabIndex = 2;
+            this.tableLayoutPanel1.SetColumnSpan(this.tb_DescriptionEvent, 2);
+            this.tb_DescriptionEvent.Location = new System.Drawing.Point(346, 68);
+            this.tb_DescriptionEvent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tb_DescriptionEvent.Name = "tb_DescriptionEvent";
+            this.tb_DescriptionEvent.Size = new System.Drawing.Size(634, 23);
+            this.tb_DescriptionEvent.TabIndex = 2;
             // 
             // label3
             // 
@@ -99,28 +99,29 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Date:";
             // 
-            // dateTimePicker1
+            // dateTimePicker_DateEvent
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.dateTimePicker1, 2);
-            this.dateTimePicker1.Location = new System.Drawing.Point(347, 132);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(634, 23);
-            this.dateTimePicker1.TabIndex = 4;
+            this.tableLayoutPanel1.SetColumnSpan(this.dateTimePicker_DateEvent, 2);
+            this.dateTimePicker_DateEvent.Location = new System.Drawing.Point(346, 132);
+            this.dateTimePicker_DateEvent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dateTimePicker_DateEvent.Name = "dateTimePicker_DateEvent";
+            this.dateTimePicker_DateEvent.Size = new System.Drawing.Size(634, 23);
+            this.dateTimePicker_DateEvent.TabIndex = 4;
             // 
-            // button1
+            // bt_AddEvent
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.bt_AddEvent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.SetColumnSpan(this.button1, 3);
-            this.button1.Location = new System.Drawing.Point(3, 185);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(978, 47);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Add Event";
-            this.button1.UseVisualStyleBackColor = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.bt_AddEvent, 3);
+            this.bt_AddEvent.Location = new System.Drawing.Point(3, 185);
+            this.bt_AddEvent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bt_AddEvent.Name = "bt_AddEvent";
+            this.bt_AddEvent.Size = new System.Drawing.Size(978, 47);
+            this.bt_AddEvent.TabIndex = 5;
+            this.bt_AddEvent.Text = "Add Event";
+            this.bt_AddEvent.UseVisualStyleBackColor = true;
+            this.bt_AddEvent.Click += new System.EventHandler(this.bt_AddEvent_Click);
             // 
             // ucEventAdd
             // 
@@ -142,9 +143,9 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tb_DescriptionEvent;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_DateEvent;
+        private System.Windows.Forms.Button bt_AddEvent;
     }
 }

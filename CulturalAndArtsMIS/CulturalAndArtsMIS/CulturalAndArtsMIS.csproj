@@ -63,6 +63,10 @@
     <Compile Include="Migrations\202007130844318_Events.Designer.cs">
       <DependentUpon>202007130844318_Events.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007131146593_FIXDATE.cs" />
+    <Compile Include="Migrations\202007131146593_FIXDATE.Designer.cs">
+      <DependentUpon>202007131146593_FIXDATE.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\cAaDbInitializer.cs" />
     <Compile Include="Models\cAaMISContext.cs" />
@@ -98,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007130844318_Events.resx">
       <DependentUpon>202007130844318_Events.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007131146593_FIXDATE.resx">
+      <DependentUpon>202007131146593_FIXDATE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
