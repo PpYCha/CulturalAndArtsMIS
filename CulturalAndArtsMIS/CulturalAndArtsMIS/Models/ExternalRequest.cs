@@ -24,12 +24,12 @@ namespace CulturalAndArtsMIS.Models
         public string noOfPerformer { get; set; }
         public bool bitaw { get; set; }
         public string specify { get; set; }
-
         public bool? granted { get; set; }
         public bool? denied { get; set; }
         public string denied_Reason { get; set; }
         public string notedBy { get; set; }
         public string ApprovedBy { get; set; }
+        public bool ExternalInternal { get; set; }
 
     }
 }

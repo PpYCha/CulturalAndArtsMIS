@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CulturalAndArtsMIS.Models;
+using System.Xml.Serialization;
+using System.Runtime.CompilerServices;
 
 namespace CulturalAndArtsMIS.UserControlPages
 {
@@ -27,14 +29,35 @@ namespace CulturalAndArtsMIS.UserControlPages
                     _instance = new ucExternalRequest();
                 return _instance;
             }
+
+        }
+
+        private static string choice;
+
+        public static string Choice
+        {
+            get { return choice; }
+            set
+            {
+                choice = value;
+
+            }
         }
 
         private void bt_Save_Click(object sender, EventArgs e)
         {
-            SaveExternalReport();
+            if (choice == "internal")
+            {
+
+                SaveExternalReport(true);
+            }
+            if (choice == "external")
+            {
+                SaveExternalReport(false);
+            }
         }
 
-        private void SaveExternalReport()
+        private void SaveExternalReport(bool value)
         {
             using (cAaMISContext ctx = new cAaMISContext())
             {
@@ -58,12 +81,32 @@ namespace CulturalAndArtsMIS.UserControlPages
                     noOfPerformance = tb_NoOfPerformance.Text,
                     noOfPerformer = tb_NoOfPerformers.Text,
                     bitaw = checkBox_BITAW.Checked,
-                    specify = tb_Specify.Text
+                    specify = tb_Specify.Text,
+                    ExternalInternal = value
                 };
 
                 ctx.ExternalRequest.Add(externalReport);
                 ctx.SaveChanges();
             }
+        }
+
+        private void ucExternalRequest_Load(object sender, EventArgs e)
+        {
+            labelTextInfo(choice);
+
+        }
+
+        public void labelTextInfo(string value)
+        {
+            if (value == "internal")
+            {
+                this.label_ExternalInternal.Text = "Internal";
+            }
+            if (value == "external")
+            {
+                this.label_ExternalInternal.Text = "External";
+            }
+
         }
     }
 }

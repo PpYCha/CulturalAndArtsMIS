@@ -156,18 +156,24 @@ namespace CulturalAndArtsMIS
 
         private void bt_side_IPR_Click(object sender, EventArgs e)
         {
+            ucExternalRequest ucExternal = new ucExternalRequest();
+
             Cursor.Current = Cursors.WaitCursor;
-            if (!panel_Body.Controls.Contains(ucInternalRequest.Instance))
+            if (!panel_Body.Controls.Contains(ucExternalRequest.Instance))
             {
-                panel_Body.Controls.Add(ucInternalRequest.Instance);
-                ucInternalRequest.Instance.Dock = DockStyle.Fill;
+                panel_Body.Controls.Add(ucExternalRequest.Instance);
+                ucExternalRequest.Instance.Dock = DockStyle.Fill;
+
+                ucExternalRequest.Choice = "internal";
             }
             else
             {
-
+                ucExternal.labelTextInfo("internal");
             }
 
-            ucInternalRequest.Instance.BringToFront();
+
+
+            ucExternalRequest.Instance.BringToFront();
             panel_Body.Visible = true;
             Cursor.Current = Cursors.Default;
         }
@@ -215,11 +221,15 @@ namespace CulturalAndArtsMIS
             {
                 panel_Body.Controls.Add(ucExternalRequest.Instance);
                 ucExternalRequest.Instance.Dock = DockStyle.Fill;
+
+                ucExternalRequest.Choice = "external";
             }
             else
             {
-
+                ucExternalRequest.Choice = "external";
             }
+
+
 
             ucExternalRequest.Instance.BringToFront();
             panel_Body.Visible = true;
@@ -285,6 +295,8 @@ namespace CulturalAndArtsMIS
             {
 
             }
+
+
 
             ucExternalListReport.Instance.BringToFront();
             panel_Body.Visible = true;

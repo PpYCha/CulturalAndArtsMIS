@@ -175,10 +175,15 @@
     <Compile Include="Migrations\202007300211244_Fixxxxxxx.Designer.cs">
       <DependentUpon>202007300211244_Fixxxxxxx.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007300808228_Fixxxssssxsx.cs" />
+    <Compile Include="Migrations\202007300808228_Fixxxssssxsx.Designer.cs">
+      <DependentUpon>202007300808228_Fixxxssssxsx.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\cAaDbInitializer.cs" />
     <Compile Include="Models\cAaMISContext.cs" />
     <Compile Include="Models\ExternalRequest.cs" />
+    <Compile Include="Models\InternalRequest.cs" />
     <Compile Include="Models\Setting.cs" />
     <Compile Include="Models\StudentProfile.cs" />
     <Compile Include="Models\UserAccount.cs" />
@@ -302,6 +307,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007300211244_Fixxxxxxx.resx">
       <DependentUpon>202007300211244_Fixxxxxxx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007300808228_Fixxxssssxsx.resx">
+      <DependentUpon>202007300808228_Fixxxssssxsx.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

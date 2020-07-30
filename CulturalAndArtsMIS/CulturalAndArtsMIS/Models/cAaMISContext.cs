@@ -20,6 +20,7 @@ namespace CulturalAndArtsMIS.Models
         public DbSet<StudentProfile> StudentProfile { get; set; }
         public DbSet<UserAccount> UserAccount { get; set; }
         public DbSet<ExternalRequest> ExternalRequest { get; set; }
+        public DbSet<InternalRequest> InternalRequest { get; set; }
 
         public DbSet<Setting> Setting { get; set; }
 
@@ -37,6 +38,9 @@ namespace CulturalAndArtsMIS.Models
 
             modelBuilder.Entity<ExternalRequest>().HasKey(k => k.er_ID)
               .Property(p => p.er_ID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+
+            modelBuilder.Entity<InternalRequest>().HasKey(k => k.ir_ID)
+             .Property(p => p.ir_ID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
             modelBuilder.Entity<Setting>().HasKey(k => k.setting_ID)
              .Property(p => p.setting_ID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
