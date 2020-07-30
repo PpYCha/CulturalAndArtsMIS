@@ -10,20 +10,20 @@ using System.Windows.Forms;
 
 namespace CulturalAndArtsMIS.UserControlPages
 {
-    public partial class ucServices : UserControl
+    public partial class ucInternalRequest : UserControl
     {
-        public ucServices()
+        public ucInternalRequest()
         {
             InitializeComponent();
         }
 
-        private static ucServices _instance;
-        public static ucServices Instance
+        private static ucInternalRequest _instance;
+        public static ucInternalRequest Instance 
         {
             get
             {
                 if (_instance == null)
-                    _instance = new ucServices();
+                    _instance = new ucInternalRequest();
                 return _instance;
             }
         }

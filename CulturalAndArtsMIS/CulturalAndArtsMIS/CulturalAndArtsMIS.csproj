@@ -12,6 +12,22 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\PpYCha\Desktop\test4\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,7 +48,32 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>0950218CBD9871E5CE72E5ACACE754E203F1AAF5</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>CulturalAndArtsMIS_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -42,6 +83,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -53,6 +95,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ProfileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProfileForm.Designer.cs">
+      <DependentUpon>ProfileForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ViewExternalReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewExternalReportForm.Designer.cs">
+      <DependentUpon>ViewExternalReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ViewPrintExternal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewPrintExternal.Designer.cs">
+      <DependentUpon>ViewPrintExternal.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,12 +139,83 @@
     <Compile Include="Migrations\202007131146593_FIXDATE.Designer.cs">
       <DependentUpon>202007131146593_FIXDATE.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007140020341_AddedStudentProfile.cs" />
+    <Compile Include="Migrations\202007140020341_AddedStudentProfile.Designer.cs">
+      <DependentUpon>202007140020341_AddedStudentProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007150644578_UA.cs" />
+    <Compile Include="Migrations\202007150644578_UA.Designer.cs">
+      <DependentUpon>202007150644578_UA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007150646023_UA_IsActive.cs" />
+    <Compile Include="Migrations\202007150646023_UA_IsActive.Designer.cs">
+      <DependentUpon>202007150646023_UA_IsActive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007150742573_Role.cs" />
+    <Compile Include="Migrations\202007150742573_Role.Designer.cs">
+      <DependentUpon>202007150742573_Role.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007290649482_External.cs" />
+    <Compile Include="Migrations\202007290649482_External.Designer.cs">
+      <DependentUpon>202007290649482_External.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007290706257_Externalsss.cs" />
+    <Compile Include="Migrations\202007290706257_Externalsss.Designer.cs">
+      <DependentUpon>202007290706257_Externalsss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007290713357_Externalsssss.cs" />
+    <Compile Include="Migrations\202007290713357_Externalsssss.Designer.cs">
+      <DependentUpon>202007290713357_Externalsssss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007300142353_Settingsss.cs" />
+    <Compile Include="Migrations\202007300142353_Settingsss.Designer.cs">
+      <DependentUpon>202007300142353_Settingsss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007300211244_Fixxxxxxx.cs" />
+    <Compile Include="Migrations\202007300211244_Fixxxxxxx.Designer.cs">
+      <DependentUpon>202007300211244_Fixxxxxxx.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\cAaDbInitializer.cs" />
     <Compile Include="Models\cAaMISContext.cs" />
+    <Compile Include="Models\ExternalRequest.cs" />
+    <Compile Include="Models\Setting.cs" />
+    <Compile Include="Models\StudentProfile.cs" />
+    <Compile Include="Models\UserAccount.cs" />
     <Compile Include="Models\YearListOfEvents.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\ServicesInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ServicesInfoForm.Designer.cs">
+      <DependentUpon>ServicesInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rpt_ExternalRequest.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_ExternalRequest.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SQLCon.cs" />
+    <Compile Include="UserControlPages\ucAddUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlPages\ucAddUser.Designer.cs">
+      <DependentUpon>ucAddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlPages\ucExternalRequest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlPages\ucExternalRequest.Designer.cs">
+      <DependentUpon>ucExternalRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlPages\ucInternalRequest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlPages\ucInternalRequest.Designer.cs">
+      <DependentUpon>ucInternalRequest.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlPages\ucRecruitmentForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -85,11 +228,23 @@
     <Compile Include="UserControlPages\ucEventAdd.Designer.cs">
       <DependentUpon>ucEventAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlPages\ucServices.cs">
+    <Compile Include="UserControlPages\ucExternalListReport.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControlPages\ucServices.Designer.cs">
-      <DependentUpon>ucServices.cs</DependentUpon>
+    <Compile Include="UserControlPages\ucExternalListReport.Designer.cs">
+      <DependentUpon>ucExternalListReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlPages\ucServicesMain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlPages\ucServicesMain.Designer.cs">
+      <DependentUpon>ucServicesMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlPages\ucStudentProfileList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlPages\ucStudentProfileList.Designer.cs">
+      <DependentUpon>ucStudentProfileList.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlPages\ucYearListofEvents.cs">
       <SubType>UserControl</SubType>
@@ -97,6 +252,21 @@
     <Compile Include="UserControlPages\ucYearListofEvents.Designer.cs">
       <DependentUpon>ucYearListofEvents.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProfileForm.resx">
+      <DependentUpon>ProfileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewExternalReportForm.resx">
+      <DependentUpon>ViewExternalReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewPrintExternal.resx">
+      <DependentUpon>ViewPrintExternal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -106,6 +276,33 @@
     <EmbeddedResource Include="Migrations\202007131146593_FIXDATE.resx">
       <DependentUpon>202007131146593_FIXDATE.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007140020341_AddedStudentProfile.resx">
+      <DependentUpon>202007140020341_AddedStudentProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007150644578_UA.resx">
+      <DependentUpon>202007150644578_UA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007150646023_UA_IsActive.resx">
+      <DependentUpon>202007150646023_UA_IsActive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007150742573_Role.resx">
+      <DependentUpon>202007150742573_Role.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007290649482_External.resx">
+      <DependentUpon>202007290649482_External.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007290706257_Externalsss.resx">
+      <DependentUpon>202007290706257_Externalsss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007290713357_Externalsssss.resx">
+      <DependentUpon>202007290713357_Externalsssss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007300142353_Settingsss.resx">
+      <DependentUpon>202007300142353_Settingsss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007300211244_Fixxxxxxx.resx">
+      <DependentUpon>202007300211244_Fixxxxxxx.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -114,20 +311,44 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Forms\ServicesInfoForm.resx">
+      <DependentUpon>ServicesInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpt_ExternalRequest.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_ExternalRequest.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlPages\ucAddUser.resx">
+      <DependentUpon>ucAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlPages\ucExternalRequest.resx">
+      <DependentUpon>ucExternalRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlPages\ucInternalRequest.resx">
+      <DependentUpon>ucInternalRequest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControlPages\ucRecruitmentForm.resx">
       <DependentUpon>ucRecruitmentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlPages\ucEventAdd.resx">
       <DependentUpon>ucEventAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlPages\ucServices.resx">
-      <DependentUpon>ucServices.cs</DependentUpon>
+    <EmbeddedResource Include="UserControlPages\ucExternalListReport.resx">
+      <DependentUpon>ucExternalListReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlPages\ucServicesMain.resx">
+      <DependentUpon>ucServicesMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlPages\ucStudentProfileList.resx">
+      <DependentUpon>ucStudentProfileList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlPages\ucYearListofEvents.resx">
       <DependentUpon>ucYearListofEvents.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -141,6 +362,62 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\icons8_profile_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_add_user_male_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_schedule_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_services_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_combo_chart_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_petition_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_multiply_480px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_shutdown_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user_512px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_settings_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search_25px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
